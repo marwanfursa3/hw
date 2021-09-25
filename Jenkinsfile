@@ -7,7 +7,7 @@ pipeline{
                    
             }
        }
- stage("cd') { 
+ stage('cd') { 
             steps {
                    sh "cd spring-petclinic"
                    
