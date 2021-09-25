@@ -1,5 +1,5 @@
 pipeline{
-  agent any 
+  agent slave
     stages {
         stage('Build') { 
             steps {
@@ -7,13 +7,13 @@ pipeline{
                    
             }
        }
- stage('cd') { 
-            steps {
+ //stage('cd') { 
+    //        steps {
            //        sh "cd spring-petclinic"
-                          sh "cat ${spring-petclinic}"
+       //                   sh "cat ${spring-petclinic}"
      
-            }
-       }
+     //       }
+      // }
         stage('mvnw ') { 
             steps {
                   script{
