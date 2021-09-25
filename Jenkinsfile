@@ -8,11 +8,14 @@ pipeline{
  
             }
        }
-        stage('') { 
-            steps {
-                // 
-            }
-        }
+        stage('read') {
+           steps {
+               script {
+                   def data = readFile(file: 'spring-petclinic')
+                   println(data)
+               }
+           }
+       }
         stage('Deploy') { 
             steps {
                 // 
