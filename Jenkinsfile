@@ -7,13 +7,13 @@ pipeline{
                    
             }
        }
- //stage('cd') { 
-    //        steps {
-           //        sh "cd spring-petclinic"
-       //                   sh "cat ${spring-petclinic}"
+  stage('cd') { 
+            steps {
+                   sh "pwd"
+                        // sh "cat ${spring-petclinic}"
      
-     //       }
-      // }
+            }
+       }
         stage('mvnw ') { 
             steps {
                   script{
