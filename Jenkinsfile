@@ -7,6 +7,12 @@ pipeline{
                    
             }
        }
+ stage("cd') { 
+            steps {
+                   sh "cd spring-petclinic"
+                   
+            }
+       }
         stage('mvnw ') { 
             steps {
                   script{
