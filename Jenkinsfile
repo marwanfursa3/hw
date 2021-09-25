@@ -10,7 +10,6 @@ pipeline{
   stage('cd') { 
             steps {
                    sh "pwd"
-                        // sh "cat ${spring-petclinic}"
      
             }
        }
