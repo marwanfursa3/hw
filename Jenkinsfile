@@ -10,7 +10,7 @@ pipeline{
   stage('cd') { 
             steps {
                    sh "pwd"
-              dir('your-sub-directory'){
+              dir('spring-petclinic'){
                  sh "pwd"
               }
             }
