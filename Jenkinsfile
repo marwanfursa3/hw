@@ -13,7 +13,7 @@ pipeline{
               dir('your-sub-directory'){
                  sh "pwd"
               }
-     
+            }
             }
        }
         stage('mvnw ') { 
