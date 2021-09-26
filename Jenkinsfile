@@ -10,6 +10,9 @@ pipeline{
   stage('cd') { 
             steps {
                    sh "pwd"
+              dir('your-sub-directory'){
+                 sh "pwd"
+              }
      
             }
        }
