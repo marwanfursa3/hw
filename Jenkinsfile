@@ -14,7 +14,7 @@ pipeline{
                  sh "pwd"
               }
             }
-            }
+            
        }
         stage('mvnw ') { 
             steps {
