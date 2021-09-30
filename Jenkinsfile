@@ -1,26 +1,35 @@
 pipeline{
   agent {label 'slave' };
-    stages {
+    
+      stages {
+        stage("init") {
+            steps {
+                script {
+                   gv = load "script" 
+                }
+            }
+        }
+      }
         stage('Build') { 
             steps {
-                   git branch: 'main', url: 'https://github.com/spring-projects/spring-petclinic.git'
-                   
+    script {
+                    gv.build()
+                }                   
             }
        }
   stage('cd') { 
             steps {
-                   sh "pwd"
-              dir('spring-petclinic'){
-                 sh "pwd"
-              }
+                      script {
+                    gv.cd()
+                }
             }
             
        }
         stage('mvnw ') { 
             steps {
-                  script{
-                            "./mvnw package"
-             }      
+                     script {
+                    gv.mvnw()
+                }
             }
        }
        
