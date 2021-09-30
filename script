@@ -1,0 +1,18 @@
+def build() {
+   git branch: 'main', url: 'https://github.com/spring-projects/spring-petclinic.git'
+} 
+
+def cd() {
+    sh "pwd"
+         dir('spring-petclinic'){
+               sh "pwd"
+         }  
+}
+
+def deployApp() {
+   script{
+           "./mvnw package
+   }      
+} 
+
+return this
